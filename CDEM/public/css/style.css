@@ -1,0 +1,253 @@
+/********************************************* Page part *********************************************/
+
+html {
+  min-height: 100%;
+  background: rgb(214, 223, 255);
+  background: linear-gradient(0deg, rgba(214, 223, 255, 1) 0%, rgba(214, 223, 255, 1) 60%, rgba(238, 238, 238, 1) 60%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  overflow: hidden scroll;
+  flex-wrap: wrap;
+}
+
+body {
+  flex: 1;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5%;
+  min-height: 768px;
+}
+
+/********************************************* Header part *********************************************/
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#connect {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 1em;
+  width: 10%;
+  background: white;
+  border-radius: 30px;
+  height: 50%;
+}
+
+#round {
+  width: 1.5vw;
+  height: 1.5vw;
+  border-radius: 50%;
+  background-color: #777bff;
+}
+
+#connect a {
+  text-decoration: none;
+  font-size: 1rem;
+  opacity: 1;
+  outline: none;
+  color: #000;
+  white-space: nowrap;
+}
+
+#logo {
+  outline: none;
+  text-decoration: none;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 1%;
+  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+@media all and (max-width: 1445px) {
+  #connect {
+    width: 13%;
+  }
+}
+
+@media all and (max-width: 1100px) {
+  #connect {
+    width: 16%;
+  }
+}
+
+@media all and (max-width: 900px) {
+  #connect {
+    width: 19%;
+  }
+}
+
+@media all and (max-width: 700px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  #connect {
+    display: none;
+  }
+  #logo {
+    font-size: 5rem;
+    padding: 0;
+  }
+}
+
+/********************************************* Body and Homepage part *********************************************/
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+#container2 {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  row-gap: 13%;
+}
+
+@media all and (max-width: 700px) {
+  #container2 {
+    width: 100%;
+  }
+}
+
+.button:hover, .connectHover:hover {
+  filter: brightness(90%);
+  -webkit-filter: brightness(90%);
+}
+
+/********************************************* Homepage blocks part *********************************************/
+
+.blocks {
+  flex: auto;
+  display: flex;
+  column-gap: 8%;
+}
+
+.block {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  flex: 1;
+  border-style: none;
+  border-radius: 15%;
+  box-shadow: 0px 7px rgba(0, 0, 255, .2);
+  /*transition-duration: 1000ms;
+  transform: scale(1);*/
+}
+
+.block:hover {
+  transition-duration: 1000ms;
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+@media all and (max-width: 700px) {
+  .blocks {
+    flex-direction: column;
+    align-items: center;
+    column-gap: 0;
+    row-gap: 8%;
+  }
+  .block {
+    width: 70%;
+  }
+  .block:last-child {
+    margin-bottom: 50px;
+  }
+}
+
+/********************************************* Homepage content part *********************************************/
+
+.create {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 1) 40%, rgba(177, 182, 255, 1) 40%);
+}
+
+.join {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 1) 40%, rgba(255, 198, 177, 1) 40%);
+}
+
+.block p {
+  margin: auto;
+  text-align: center;
+  color: black;
+  font-size: 4.5em;
+  outline: none;
+}
+
+.block .plein {
+  flex: 4;
+  display: flex;
+  justify-content: center;
+}
+
+.block .vide {
+  flex: 6;
+}
+
+#pseudo {
+  margin: auto;
+  height: 50px;
+  width: 100%;
+  border-style: none;
+  border-radius: 30px;
+  text-align: center;
+  color: black;
+  font-size: 2rem;
+  background-color: white;
+  padding: 15px 0px 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+#pseudo:focus {
+  border: 2px solid rgba(177, 182, 255, 1);
+  outline: none;
+}
+
+/********************************************* Typography and text part *********************************************/
+
+a, p, ::placeholder {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+::placeholder {
+  color: #d5d5d5;
+}
+
+/********************************************* Screen size part *********************************************/
+
+@media all and (max-width: 1600px) {
+  .block p {
+    font-size: 3em;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .block p {
+    font-size: 2em;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .block p {
+    font-size: 1.5em;
+  }
+}
